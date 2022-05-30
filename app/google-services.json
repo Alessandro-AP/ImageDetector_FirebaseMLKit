@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "421796606897",
+    "project_id": "cld-project",
+    "storage_bucket": "cld-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421796606897:android:4e397eaf4715668bb70390",
+        "android_client_info": {
+          "package_name": "com.project.imagedetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421796606897-msrb9f1p4773fstg7kbu92e3hijr8vg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwll-0mOZVv5j2YLPrR4x_I1cYYKmEIi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421796606897-msrb9f1p4773fstg7kbu92e3hijr8vg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
