@@ -4,6 +4,7 @@ package com.project.imagedetector
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -134,12 +135,14 @@ class MainActivity : AppCompatActivity() {
             .process(inputImage)
             .addOnSuccessListener { labels ->
                 for(label in labels) {
-                    result.add(label.text)
+                    result.add("${label.text} ${(label.confidence * 100F).toLong()}%")
                 }
                 println(result.joinToString("\n"))
                 binding.resultTextView.text = result.joinToString("\n")
+                binding.resultTextView.movementMethod =  ScrollingMovementMethod()
                 binding.resultTextView.visibility = View.VISIBLE
                 checkWin()
+                result = mutableListOf()
             }
             .addOnFailureListener{
                 Log.d(CLOUD_VISION, "Error : ${it.message}")
@@ -153,7 +156,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkWin(){
-        if (result.any {  it.lowercase() == currentObjectToFind.lowercase() })
+        if (result.any {  it.lowercase().contains(currentObjectToFind.lowercase()) })
             showDialog(true)
         else
             showDialog(false)

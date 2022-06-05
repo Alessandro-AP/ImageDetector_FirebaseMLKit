@@ -15,6 +15,7 @@ class SplashScreenCustom : AppCompatActivity() {
         supportActionBar?.hide()
         Handler().postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         },2000)
     }
 }
