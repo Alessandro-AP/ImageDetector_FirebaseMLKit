@@ -123,6 +123,7 @@ class MainActivity : AppCompatActivity() {
 
         randomiseObject()
         binding.resultTextView.text = ""
+        binding.resultTextView.visibility = View.GONE
 
         // Reset variables
         uri = Uri.EMPTY
